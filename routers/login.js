@@ -6,14 +6,14 @@ const jwt = require('jsonwebtoken');
 login.post('/',(req,res,next)=>{
   clientModel.find({email:req.body.email})
   .then((data)=>{
-    if(data.length < 1){
+    if(data.length < 1 || data[0].password != req.body.password){
       return res.status(401).json({
         message:'Check email and password'
       })
     }else{
-      if(data[0].password != req.body.password){
+      if(data[0].valid != null){
         return res.status(406).json({
-          message:'Check email and password'
+          message:'please verify your account'
         })
       }else{
         let token = jwt.sign(

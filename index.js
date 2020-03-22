@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 // Routes
 const login = require('./routers/login');
+const validate = require('./routers/validate');
 const register = require('./routers/register');
 const dashboard = require('./routers/dashboard');
 const generalLists = require('./routers/generalLists');
@@ -34,6 +35,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.use(bodyParser.json());
 app.use('/api/register',register);
 app.use('/api/login',login);
+app.use('/api/validate',validate);
 app.use('/api/clients',checkAuth,clients);
 app.use('/api/dashboard',checkAuth,dashboard);
 app.use('/api/generalLists',checkAuth,generalLists);
