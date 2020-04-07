@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+
 // Routes
 const login = require('./routers/login');
 const validate = require('./routers/validate');
@@ -12,6 +13,7 @@ const freelancers = require('./routers/freelancers');
 const payments = require('./routers/payments');
 const nationalities = require('./routers/Nationalities');
 const currencies = require('./routers/currencies');
+const videocall = require('./routers/videocall');
 
 
 
@@ -45,6 +47,8 @@ app.use('/api/payments',checkAuth,payments);
 app.use('/api/nationalities',checkAuth,nationalities);
 app.use('/api/currencies',checkAuth,currencies);
 
+// Video Call
+app.use('/api/videocall',videocall);
 
 
 
