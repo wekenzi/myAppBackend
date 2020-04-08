@@ -33,7 +33,7 @@ mongoose.connection.once('open',()=>{
 
 
 // allowedHeaders:['Content-Type', 'Authorization','Origin','Accept','X-Requested-With']
-app.use(cors({origin: 'http://localhost:4200'}));
+app.use(cors({origin: '*'}));
 app.use(bodyParser.json());
 app.use('/api/register',register);
 app.use('/api/login',login);
@@ -60,6 +60,6 @@ app.use((err,req,res,next)=>{
 
 
 
-app.listen(process.env.port || 3000,()=> {
+app.listen(process.env.PORT || 3000,()=> {
   console.log('Server Running');
 });
