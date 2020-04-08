@@ -23,7 +23,7 @@ mongoose.set('useFindAndModify', false);
 const cors = require('cors');
 const app = express();
 
-mongoose.connect('mongodb://localhost/AngularApi',{useNewUrlParser:true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/wekeapp',{useNewUrlParser:true});
 mongoose.Promise = global.Promise;
 mongoose.connection.once('open',()=>{
   console.log('Connected to MongoDb');
