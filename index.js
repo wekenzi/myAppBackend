@@ -11,7 +11,7 @@ const clients = require('./routers/clients');
 const projects = require('./routers/projects');
 const freelancers = require('./routers/freelancers');
 const payments = require('./routers/payments');
-const nationalities = require('./routers/Nationalities');
+const nationalities = require('./routers/nationalities');
 const currencies = require('./routers/currencies');
 const videocall = require('./routers/videocall');
 
