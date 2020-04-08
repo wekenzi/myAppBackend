@@ -17,7 +17,7 @@ const videocall = require('./routers/videocall');
 
 // DB Connection string
 // const mDB = 'mongodb://localhost/wekeapp';
-const mDB = 'mongodb://<wekeapp>:<wekeapp1234>@ds143532.mlab.com:43532/wekeapp';
+const mDB = 'mongodb://wekeapp:wekeapp1234@ds143532.mlab.com:43532/wekeapp';
 
 
 const checkAuth = require('./middleware/checkAuth');
