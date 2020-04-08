@@ -15,6 +15,9 @@ const nationalities = require('./routers/Nationalities');
 const currencies = require('./routers/currencies');
 const videocall = require('./routers/videocall');
 
+// DB Connection string
+// const mDB = 'mongodb://localhost/wekeapp';
+const mDB = 'mongodb://<wekeapp>:<wekeapp1234>@ds143532.mlab.com:43532/wekeapp';
 
 
 const checkAuth = require('./middleware/checkAuth');
@@ -23,7 +26,7 @@ mongoose.set('useFindAndModify', false);
 const cors = require('cors');
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/wekeapp',{useNewUrlParser:true});
+mongoose.connect(process.env.MONGODB_URI || mDB ,{useNewUrlParser:true});
 mongoose.Promise = global.Promise;
 mongoose.connection.once('open',()=>{
   console.log('Connected to MongoDb');
