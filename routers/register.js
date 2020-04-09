@@ -46,7 +46,8 @@ register.post('/',(req,res,next)=>{
             ` 
           }
           // send mail with defined transport object
-          let ifno = await transporter.sendMail(mailOptions);
+          let info = await transporter.sendMail(mailOptions);
+          console.log("Message sent: %s", info.messageId);
         }
 
         main().catch(console.error);
