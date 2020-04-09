@@ -21,20 +21,20 @@ register.post('/',(req,res,next)=>{
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
           // host: "smtp-mail.outlook.com",
-          service: "gmail",
+          service: "hotmail",
           // secureConnection: false, // TLS requires secureConnection to be false
           // port: 587, // port for secure SMTP
           // tls: {
           //   rejectUnauthorized:false
           // },
           auth: {
-              user: 'wekenzi1995@gmail.com',
-              pass: 'nightlight1234'
+              user: 'handsome.boy.195@hotmail.com',
+              pass: 'nightlight'
           }
         });
 
         let mailOptions = {
-          from: '"From app" <wekenzi1995@gmail.com>',
+          from: '"From app" <handsome.boy.195@hotmail.com>',
           to: email,
           subject: "Verify Your Account",
           html: `
