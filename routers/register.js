@@ -19,7 +19,7 @@ register.post('/',(req,res,next)=>{
         
 
         // create reusable transporter object using the default SMTP transport
-        let transporter = nodemailer.createTransport({
+        let transporter = nodemailer.createTransport("SMTP", {
           // host: "smtp-mail.outlook.com",
           service: "hotmail",
           // secureConnection: false, // TLS requires secureConnection to be false
