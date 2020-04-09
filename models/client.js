@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 function genarateVerfiy() {
-  return Array(40).fill(null).map(() => Math.random().toString(36).substr(2)).join('');
+  // return Array(40).fill(null).map(() => Math.random().toString(36).substr(2)).join('');
+  return null
 }
 
 const ClientSchema = new Schema({
