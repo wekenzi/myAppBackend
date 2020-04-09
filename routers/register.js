@@ -40,7 +40,7 @@ register.post('/',(req,res,next)=>{
           <h2>Welcome to our application</h2>
           <p>Please click the link below to verify your account</p>
           <p>
-            <a href="http://localhost:3000/api/validate/${verifyToken}/${email}">Verfiy Account</a>
+            <a href="http://localhost:4200/confirm/${verifyToken}/${email}" target="_blank">Verfiy Account</a>
           </p>
           ` 
         }
