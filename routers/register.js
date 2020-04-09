@@ -50,12 +50,11 @@ register.post('/',(req,res,next)=>{
           console.log("Message sent: %s", info.messageId);
         }
 
-        sendEmail().catch(console.error);
-
-        return res.status(200).json({
-          message:'Thanks for register, please verify your email'
-        });
-
+        sendEmail().then(data=>{
+          return res.status(200).json({
+            message:'Thanks for register, please verify your email'
+          });
+        }).catch(console.error);
       })
     }
   }).catch(next);
