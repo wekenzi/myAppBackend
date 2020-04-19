@@ -36,7 +36,7 @@ mongoose.connection.once('open',()=>{
 
 
 // allowedHeaders:['Content-Type', 'Authorization','Origin','Accept','X-Requested-With']
-app.use(cors({origin: ['http://localhost:4200','https://wekeapp.netlify.com']}));
+app.use(cors({origin: ['http://localhost:4200','https://wekeapp.netlify.com','https://wekeapp.netlify.app']}));
 app.use(bodyParser.json());
 app.use('/api/register',register);
 app.use('/api/login',login);
